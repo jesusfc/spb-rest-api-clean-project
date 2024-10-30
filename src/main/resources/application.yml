@@ -1,0 +1,35 @@
+##########################################
+###### GENERAL SETTINGS ###################
+##########################################
+springdoc:
+  swagger-ui:
+    operations-sorter: method
+    tags-sorter: alpha
+---
+##########################################
+###### GENERAL SETTINGS DEVELOPMENT ######
+##########################################
+spring:
+  web:
+    resources:
+      add-mappings: false
+  application:
+    name: SpringBoot API - DEVELOPMENT
+  config:
+    activate:
+      on-profile: development
+    import:
+      - properties/application-development.yml
+---
+##########################################
+###### GENERAL SETTINGS PRODUCTION ######
+##########################################
+spring:
+  application:
+    name: SpringBoot API - PRODUCTION
+  config:
+    activate:
+      on-profile: production
+    import:
+      - properties/application-production.yml
+---
