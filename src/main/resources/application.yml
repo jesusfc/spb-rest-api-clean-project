@@ -20,6 +20,12 @@ spring:
       on-profile: development
     import:
       - properties/application-development.yml
+logging:
+  level:
+    org:
+      springframework:
+        web: debug
+        security: trace
 ---
 ##########################################
 ###### GENERAL SETTINGS PRODUCTION ######
