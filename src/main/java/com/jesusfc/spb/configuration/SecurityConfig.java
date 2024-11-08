@@ -12,16 +12,16 @@ import org.springframework.security.web.SecurityFilterChain;
  * jesus.fdez.caraballo@gmail.com
  * Created on nov - 2024
  */
-@EnableWebSecurity
+@EnableWebSecurity(debug = true)
 @Configuration
 public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
-                .httpBasic(Customizer.withDefaults()) // BasicAuthenticationFilter
-                .authorizeHttpRequests(authorizeRequests ->
-                        authorizeRequests.anyRequest().authenticated()) // AuthorizationFilter
+               // .httpBasic(Customizer.withDefaults()) // BasicAuthenticationFilter
+                //.authorizeHttpRequests(authorizeRequests ->
+                   //     authorizeRequests.anyRequest().authenticated()) // AuthorizationFilter
                 .build();
     }
 
