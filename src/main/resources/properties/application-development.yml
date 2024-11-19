@@ -2,7 +2,18 @@ server:
   port: 8080
 logging:
   level:
+    root: info
     org:
       springframework:
         web: debug
         security: trace
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+      show-components: always

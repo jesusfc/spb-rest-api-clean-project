@@ -2,7 +2,18 @@ server:
   port: 8085
 logging:
   level:
+    root: info
     org:
       springframework:
         web: off
         security: off
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+      show-components: always

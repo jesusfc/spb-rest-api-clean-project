@@ -30,7 +30,7 @@ public class SecurityConfig {
         return http
                 .httpBasic(Customizer.withDefaults()) //BasicAuthenticationFilter
                 .authorizeHttpRequests(auth -> auth.anyRequest().authenticated()) //AuthorizationFilter
-                .addFilterBefore(new TestSecurityBeforeFilter(), AuthorizationFilter.class)
+             //   .addFilterBefore(new TestSecurityBeforeFilter(), AuthorizationFilter.class)
                 .addFilterAfter(new TestSecurityAfterFilter(), AuthorizationFilter.class)
                 .build();
     }
